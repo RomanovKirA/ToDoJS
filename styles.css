@@ -1,3 +1,56 @@
 * {
-  font-family: "Honk", system-ui;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-size: 32px;
+  background: rgb(89, 62, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(89, 62, 130, 1) 0%,
+    rgba(48, 91, 131, 1) 50%,
+    rgba(1, 33, 144, 1) 100%
+  );
+}
+
+.title {
+  text-align: center;
+  cursor: default;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container__todo-name {
+  width: 570px;
+}
+
+.todo-container__todo-name:focus {
+  outline: none;
+  border: solid 2px rgba(1, 33, 144, 1);
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 600ms;
+}
+
+.icon-btn:hover {
+  transform: scale(140%);
+  transition: all 600ms;
+}
+
+.icon {
+  width: 50px;
+}
+
+.todo-container__btn-add,
+.todo-container__btn-delete {
+  margin-left: 8px;
 }
