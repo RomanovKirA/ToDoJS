@@ -16,14 +16,22 @@
   <body>
     <h2 class="title">Что скажешь брат?</h2>
     <div class="todo-container">
-      <input class="todo-container__todo-name" type="text" placeholder="Dolbi Dolbi brat" />
-      <button class="icon-btn todo-container__btn-add">
+      <input
+        class="todo-container__todo-name"
+        id="task"
+        type="text"
+        placeholder="Dolbi Dolbi brat"
+      />
+      <button class="icon-btn todo-container__btn-add" id="add">
         <img class="icon" src="./images/plus-svgrepo-com.svg" alt="" />
       </button>
-      <button class="icon-btn todo-container__btn-delete">
+      <button class="icon-btn todo-container__btn-delete" id="delete-all">
         <img class="icon" src="./images/full-trash-svgrepo-com.svg" alt="" />
       </button>
     </div>
-    <div></div>
+    <div id="list-items">
+      
+    </div>
+    <script src="./app.js" defer></script>
   </body>
 </html>
