@@ -25,7 +25,7 @@ body {
 }
 
 .todo-container__todo-name {
-  width: 570px;
+  width: 635px;
 }
 
 .todo-container__todo-name:focus {
@@ -38,12 +38,12 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: all 600ms;
+  transition: all 0.6s;
 }
 
 .icon-btn:hover {
   transform: scale(140%);
-  transition: all 600ms;
+  transition: all 0.6s;
 }
 
 .icon {
@@ -53,4 +53,22 @@ body {
 .todo-container__btn-add,
 .todo-container__btn-delete {
   margin-left: 8px;
+}
+
+.js-todo-list {
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.item-text {
+  width: 90.5%;
 }
