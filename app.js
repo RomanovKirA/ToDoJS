@@ -15,7 +15,7 @@ function renderTodo(todo) {
     <input class="" id="${todo.id}" type="checkbox"/>
     <label for="${todo.id}" class="tick js-tick"></label>
     <span class='item-text'>${todo.title}</span>
-    <button class="delete-todo js-delete-todo icon-btn">
+    <button class="delete-todo js-delete-todo icon-btn" >
     <img class="icon" src="./images/full-trash-svgrepo-com.svg" alt="" />
     </button>
   `;
@@ -35,7 +35,17 @@ function addTodo(todoText) {
   console.log(todoItems);
 }
 
+function deleteTodos(todos) {
+  const list = document.querySelector(".js-todo-list");
+  todos = [];
+  list.innerHTML = ``
+}
+
 const form = document.querySelector("#todo-form");
+const deleteBtn = document.querySelector("#delete-all");
+deleteBtn.addEventListener("click", () => {
+  deleteTodos(todoItems);
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
