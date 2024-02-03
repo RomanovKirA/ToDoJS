@@ -25,7 +25,7 @@ body {
 }
 
 .todo-container__todo-name {
-  width: 570px;
+  width: 635px;
 }
 
 .todo-container__todo-name:focus {
@@ -55,6 +55,20 @@ body {
   margin-left: 8px;
 }
 
-.task-element{
-  background-color: red;
+.js-todo-list {
+  margin-top: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.item-text {
+  width: 90.5%;
 }
