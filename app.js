@@ -1,3 +1,6 @@
+const list = document.querySelector(".js-todo-list");
+const form = document.querySelector("#todo-form");
+const deleteBtn = document.querySelector("#delete-all");
 let todoItems = [];
 
 function renderTodo(todo) {
@@ -13,10 +16,9 @@ function renderTodo(todo) {
 
   htmlItem.innerHTML = `
     <input class="" id="${todo.id}" type="checkbox"/>
-    <label for="${todo.id}" class="tick js-tick"></label>
     <span class='item-text'>${todo.title}</span>
-    <button class="delete-todo js-delete-todo icon-btn" >
-    <img class="icon" src="./images/full-trash-svgrepo-com.svg" alt="" />
+    <button class="delete-todo js-delete-todo icon-btn" id="${todo.id}">
+    <img class="icon icon-delete" src="./images/full-trash-svgrepo-com.svg" alt="" />
     </button>
   `;
 
@@ -32,17 +34,31 @@ function addTodo(todoText) {
 
   todoItems.push(todo);
   renderTodo(todo);
-  console.log(todoItems);
 }
 
 function deleteTodos(todos) {
   const list = document.querySelector(".js-todo-list");
   todos = [];
-  list.innerHTML = ``
+  list.innerHTML = ``;
 }
 
-const form = document.querySelector("#todo-form");
-const deleteBtn = document.querySelector("#delete-all");
+function deleteTodo(key) {
+  const items = document.querySelector(".js-todo-list").children;
+  const todoToRemove = items.namedItem(key);
+  const todoIndex = todoItems.findIndex((todo) => {
+    return todo.id === Number(key);
+  });
+  todoItems.splice(todoIndex, 1);
+  todoToRemove.remove();
+}
+
+list.addEventListener("click", (event) => {
+  if (event.target.classList.contains("icon-delete")) {
+    const itemId = event.target.parentElement.id;
+    deleteTodo(itemId);
+  }
+});
+
 deleteBtn.addEventListener("click", () => {
   deleteTodos(todoItems);
 });
@@ -60,3 +76,4 @@ form.addEventListener("submit", (event) => {
 
   input.value = "";
 });
+
