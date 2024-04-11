@@ -34,7 +34,7 @@
         <img class="icon" src="./images/trash-svgrepo-com.svg" alt="" />
       </button>
     </form>
-    <div class="todo-list" id="js-todo-list">
+    <div class="todo-list empty-list">
       <img
         class="todo-list__empty-img"
         src="./images/wait-hourglass-svgrepo-com.svg"
@@ -42,9 +42,12 @@
         width="200px"
       />
       <li class="todo-list__item">
-        <span class="item__text item__text--empty">Брат, тебя не слышно, брат. Делай</span>
+        <span class="item__text item__text--empty"
+          >Брат, тебя не слышно, брат. Делай</span
+        >
       </li>
     </div>
+    <div class="todo-list" id="js-todo-list"></div>
     <script src="./app.js"></script>
   </body>
 </html>
