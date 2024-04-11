@@ -28,13 +28,26 @@
         id="add-todo"
         class="icon-btn todo-container__btn-add"
       >
-        <img class="icon" src="./images/plus-svgrepo-com.svg" alt="" />
+        <img class="icon" src="./images/folder-svgrepo-com.svg" alt="" />
       </button>
       <button class="icon-btn todo-container__btn-delete" id="delete-all">
-        <img class="icon" src="./images/full-trash-svgrepo-com.svg" alt="" />
+        <img class="icon" src="./images/trash-svgrepo-com.svg" alt="" />
       </button>
     </form>
-    <div class="js-todo-list"></div>
+    <div class="todo-list empty-list">
+      <img
+        class="todo-list__empty-img"
+        src="./images/wait-hourglass-svgrepo-com.svg"
+        alt=""
+        width="200px"
+      />
+      <li class="todo-list__item">
+        <span class="item__text item__text--empty"
+          >Брат, тебя не слышно, брат. Делай</span
+        >
+      </li>
+    </div>
+    <div class="todo-list" id="js-todo-list"></div>
     <script src="./app.js"></script>
   </body>
 </html>

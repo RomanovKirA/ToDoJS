@@ -25,7 +25,7 @@ body {
 }
 
 .todo-container__todo-name {
-  width: 635px;
+  width: 643px;
 }
 
 .todo-container__todo-name:focus {
@@ -47,7 +47,7 @@ body {
 }
 
 .icon {
-  width: 50px;
+  width: 45px;
 }
 
 .todo-container__btn-add,
@@ -55,20 +55,38 @@ body {
   margin-left: 8px;
 }
 
-.js-todo-list {
+.todo-list {
   margin-top: 39px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.todo-item {
-  margin-bottom: 10px;
+.todo-list__empty-img {
+  animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.todo-list__item {
+  margin-top: 30px;
   display: flex;
   align-items: center;
   width: 40%;
 }
 
-.item-text {
-  width: 90.5%;
+.item__text {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.item__text--empty {
+  text-align: center;
 }
