@@ -48,6 +48,7 @@ body {
 
 .icon {
   width: 45px;
+  pointer-events: none;
 }
 
 .todo-container__btn-add,
