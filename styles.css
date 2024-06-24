@@ -91,3 +91,15 @@ body {
 .item__text--empty {
   text-align: center;
 }
+
+.item__text--done {
+  text-decoration: line-through #030938;
+  background: rgb(62, 92, 130);
+  background: linear-gradient(
+    90deg,
+    rgba(62, 92, 130, 1) 0%,
+    rgba(37, 142, 58, 1) 70%,
+    rgba(1, 90, 144, 1) 100%
+  );
+  opacity: 0.9;
+}
